@@ -1,0 +1,7 @@
+CLANG_CXX_LANGUAGE_STANDARD = c++11
+CLANG_CXX_LIBRARY = libc++
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/FMDB" "${PODS_ROOT}/Headers/FXBlurView" "${PODS_ROOT}/Headers/ILTranslucentView" "${PODS_ROOT}/Headers/Masonry" "${PODS_ROOT}/Headers/SSKeychain" "${PODS_ROOT}/Headers/YLProgressBar" "${PODS_ROOT}/Headers/pop"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/AFNetworking" -isystem "${PODS_ROOT}/Headers/FMDB" -isystem "${PODS_ROOT}/Headers/FXBlurView" -isystem "${PODS_ROOT}/Headers/ILTranslucentView" -isystem "${PODS_ROOT}/Headers/Masonry" -isystem "${PODS_ROOT}/Headers/SSKeychain" -isystem "${PODS_ROOT}/Headers/YLProgressBar" -isystem "${PODS_ROOT}/Headers/pop"
+OTHER_LDFLAGS = -ObjC -lc++ -lsqlite3 -framework Accelerate -framework CoreGraphics -framework Foundation -framework MobileCoreServices -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit
+PODS_ROOT = ${SRCROOT}/Pods

@@ -1,0 +1,52 @@
+PODS:
+  - AFNetworking (2.1.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.1.0):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.1.0)
+  - AFNetworking/Security (2.1.0)
+  - AFNetworking/Serialization (2.1.0)
+  - AFNetworking/UIKit (2.1.0):
+    - AFNetworking/NSURLConnection
+  - FMDB (2.2):
+    - FMDB/standard
+  - FMDB/common (2.2)
+  - FMDB/standard (2.2):
+    - FMDB/common
+  - FXBlurView (1.6.1)
+  - ILTranslucentView (0.0.1)
+  - Masonry (0.4.0)
+  - pop (1.0.4)
+  - SSKeychain (1.2.2)
+  - YLProgressBar (3.1.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.1.0)
+  - FMDB
+  - FXBlurView
+  - ILTranslucentView
+  - Masonry
+  - pop
+  - SSKeychain
+  - YLProgressBar (~> 3.1.1)
+
+SPEC CHECKSUMS:
+  AFNetworking: c7d7901a83f631414c7eda1737261f696101a5cd
+  FMDB: e0dd09464b4e1a1cd7fa51ea835ae821b5656865
+  FXBlurView: 855a881c8b5f89829748070928aa9447c3d3c726
+  ILTranslucentView: 520b15548983d2370daf3c3e883a355ca82b6bf0
+  Masonry: d673617c9cbc24aaea90fba20b10e47fd9970a39
+  pop: 63a4f5e8942077fed2efe195036ecc572c71c48c
+  SSKeychain: 3d0b76c87e7b062a7ad1631a825fddec84367d44
+  YLProgressBar: eccf180aa935dc591371f1df49ce5fa5178365da
+
+COCOAPODS: 0.32.1

@@ -21,6 +21,9 @@
 @property (nonatomic, strong) UIImageView *recordBackgroundView;
 
 @property (nonatomic, strong) UIButton *playButton;
+@property (nonatomic, strong) UIView *lyricContainerView;//歌词
+@property (nonatomic, strong) UITextView *lyricTextView;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 @end
 
 
@@ -83,8 +86,8 @@
     [_singerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view.mas_centerX);
         make.centerY.equalTo(self.view.mas_centerY);
-        make.width.equalTo(@90);
-        make.height.equalTo(@90);
+        make.width.equalTo(@180);
+        make.height.equalTo(_singerImageView.mas_width);
     }];
 
     self.progressView = [LDProgressView new];
@@ -112,6 +115,41 @@
         make.top.equalTo(_singerImageView.mas_bottom);
     }];
     
+    
+    //歌词面板
+    self.lyricContainerView = [UIView new];
+    [self.view addSubview:_lyricContainerView];
+    _lyricContainerView.backgroundColor = RGBACOLOR(0, 0, 0, 0.7);
+    _lyricContainerView.hidden = YES;
+    
+    self.lyricTextView = [[UITextView alloc] initWithFrame:CGRectZero];
+    _lyricTextView.backgroundColor = [UIColor clearColor];
+    _lyricTextView.textColor = [UIColor whiteColor];
+    [_lyricTextView setEditable:NO];
+    _lyricTextView.textAlignment = NSTextAlignmentCenter;
+    _lyricTextView.text = @"无法显示歌词";
+    [_lyricContainerView addSubview:_lyricTextView];
+    self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapper:)];
+    [_lyricContainerView addGestureRecognizer:_tapGesture];
+    
+    
+    CGFloat height = [self viewVisibleHeightWithTabbar:NO naviBar:YES];
+    [_lyricContainerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.top.equalTo(self.view.mas_bottom).offset(-60);
+        make.width.equalTo(self.view.mas_width);
+        make.height.equalTo(@(height));
+    }];
+    
+    
+    [_lyricTextView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_lyricContainerView.mas_left);
+        make.top.equalTo(_lyricContainerView.mas_top);
+        make.width.equalTo(_lyricContainerView.mas_width);
+        make.bottom.equalTo(_lyricContainerView.mas_bottom);
+    }];
+
+    
     NSURL *downloadURL = [NSURL URLWithString:self.musicObject.songLink];
     if (!downloadURL) {
         GYJAlert *alert = [[GYJAlert alloc] initAlertWithTitle:@"歌曲链接无效！" message:nil cancelTitle:@"OK" completeBlock:^(GYJAlert *alert, NSInteger buttonIndex) {
@@ -122,22 +160,38 @@
     }
     
     [[GYJMusicOperationManager sharedMusicOperationManager] downloadFileWithPath:[self filePath] fileURL:downloadURL downProgress:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
-        NSLog(@"Progress:%lld  totleBytes:%lld",totalBytesRead,totalBytesExpectedToRead);
         dispatch_async(dispatch_get_main_queue(), ^{
             self.progressView.progress = (CGFloat)totalBytesRead/(CGFloat)totalBytesExpectedToRead;
             if (totalBytesRead == totalBytesExpectedToRead) {
                 _playButton.hidden = NO;
                 self.progressView.hidden = YES;
+                NSString *imgUrlString = self.musicObject.songPicBig;
+                if (!verifiedString(imgUrlString)) {
+                    imgUrlString = self.musicObject.songPicRadio;
+                }
+                [_singerImageView setImageWithURL:[NSURL URLWithString:imgUrlString] placeholderImage:[UIImage imageNamed:@"music_disk"]];
             }
         });
 
     }];
 }
+
+- (void)tapper:(UITapGestureRecognizer *)tapper{
+    
+    BOOL lyricShow = _lyricContainerView.top == self.customNaviBar.bottom ? YES : NO;
+    if (!lyricShow) {
+        _lyricContainerView.top = self.customNaviBar.bottom;
+    } else {
+        _lyricContainerView.top = self.view.bottom - 60;
+    }
+}
+
 - (NSString *)filePath{
     return [[[GYJMusicOperationManager sharedMusicOperationManager] musicDownloadPath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp3",self.musicObject.songName]];
 }
 
 - (void)startPlayMusic{
+    _lyricContainerView.hidden = NO;
     if (!_audioPlayer) {
         NSString *filePath = [self filePath];
         NSURL *fileURL = [NSURL fileURLWithPath:filePath isDirectory:NO];
@@ -150,8 +204,22 @@
         [_audioPlayer stop];
     }
     [_audioPlayer play];
+
+    if (!verifiedString(self.musicObject.lrcLink)) {
+        return;
+    }
     
-    [_singerImageView setImageWithURL:[NSURL URLWithString:self.musicObject.songPicBig] placeholderImage:nil];
+    NSString *lyricUrlString = [kMusicLyricAPI stringByAppendingString:self.musicObject.lrcLink];
+    [[GYJMusicOperationManager sharedMusicOperationManager] searchMusicLyricWithURL:[NSURL URLWithString:lyricUrlString] success:^(id lyric) {
+        NSLog(@"歌词：%@",lyric);
+        NSString *lyricString = [[NSString alloc] initWithData:lyric encoding:NSUTF8StringEncoding];
+        if (verifiedString(lyricString)) {
+            _lyricTextView.text = lyricString;
+        }
+    } failure:^(id errInfo) {
+        
+    }];
+
 }
 
 - (void)viewWillLayoutSubviews{

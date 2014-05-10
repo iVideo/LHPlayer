@@ -227,4 +227,22 @@ static NSString *musicDownloadPath = @"downloadMusic/";
     [downloadOperation setDownloadProgressBlock:block];
     [self addOperation:downloadOperation forKey:keyMusicDownload];
 }
+
+- (void)searchMusicLyricWithURL:(NSURL *)urlString success:(void(^)(id lyric))successBlock failure:(APIFailureBlock)failure{
+    NSURLRequest *lyricRequest = [[NSURLRequest alloc] initWithURL:urlString];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:lyricRequest];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+    
+    operation.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [self addOperation:operation forKey:keyMusicLyric];
+}
 @end

@@ -12,9 +12,7 @@ typedef NS_ENUM(NSInteger, UserInfoSectionCellType) {
     UserInfoSectionCellTypeCount
 };
 typedef NS_ENUM(NSInteger, SettingSectionCellType) {
-    SettingSectionCellTypeMyLike = 0,//我喜欢
-    SettingSectionCellTypeMyCollection,//我的收藏
-    SettingSectionCellTypeFriendShared,//收到的好友点歌
+    SettingSectionCellTypeMyCollection = 0,//我的收藏
     SettingSectionCellTypeAutoDownload,//边听边下
     SettingSectionCellTypeBindOtherPlatform,
     SettingSectionCellTypeCount

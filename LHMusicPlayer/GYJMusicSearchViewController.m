@@ -47,6 +47,7 @@ static NSString *musicCellID = @"musicSearchcell_id";
     [self.searchBar setImage:[UIImage imageNamed:@"base_search_magnifier.png"] forSearchBarIcon:UISearchBarIconSearch state:UIControlStateNormal];
     [self.searchBar setImage:[UIImage imageNamed:@"base_search_fork.png"] forSearchBarIcon:UISearchBarIconClear state:UIControlStateNormal];
     [_searchBar sizeToFit];
+    _searchBar.placeholder = @"搜索歌曲，演唱者或者专辑名称";
     
     self.searchDataArray = @[];
     

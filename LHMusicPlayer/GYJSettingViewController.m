@@ -150,9 +150,7 @@
 - (Class)cellClassForIndexPath:(NSIndexPath *)indexPath{
     Class cellClass = [GYJSettingBaseCell class];
     switch (indexPath.row) {
-        case SettingSectionCellTypeMyLike:
         case SettingSectionCellTypeMyCollection:
-        case SettingSectionCellTypeFriendShared:
         case SettingSectionCellTypeBindOtherPlatform:
             cellClass = [GYJSettingDetailCell class];
             break;
@@ -175,16 +173,8 @@
 
 - (void)bindCellObjectWithIndexPath:(NSIndexPath *)indexPath cell:(GYJSettingBaseCell *)cell{
     switch (indexPath.row) {
-        case SettingSectionCellTypeMyLike:{
-            [cell bindHeaderText:@"我喜欢的歌单" detailText:nil];
-        }
-            break;
         case SettingSectionCellTypeMyCollection:{
             [cell bindHeaderText:@"我的收藏" detailText:nil];
-        }
-            break;
-        case SettingSectionCellTypeFriendShared:{
-            [cell bindHeaderText:@"好友给我点的歌" detailText:nil];
         }
             break;
         case SettingSectionCellTypeBindOtherPlatform:{
@@ -240,17 +230,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
     switch (indexPath.row) {
-        case SettingSectionCellTypeMyLike:
-        {}
-            break;
        case SettingSectionCellTypeMyCollection:
         {
             GYJMyLikeSongsViewController *myConnectionSongs = [[GYJMyLikeSongsViewController alloc] initWithCustomNaviBar:YES];
             [self.navigationController pushViewController:myConnectionSongs animated:YES];
         }
-            break;
-        case SettingSectionCellTypeFriendShared:
-        {}
             break;
         case SettingSectionCellTypeAutoDownload:
         {}

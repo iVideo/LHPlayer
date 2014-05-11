@@ -1,9 +1,9 @@
 //
 //  GYJCustomNaviSegment.m
-//  LHMusicPlayer
+//  GYJMusicPlayer
 //
-//  Created by LiHang on 14-5-2.
-//  Copyright (c) 2014年 LiHang. All rights reserved.
+//  Created by 郭亚娟 on 14-5-2.
+//  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 
 #import "GYJCustomNaviSegment.h"
@@ -28,7 +28,7 @@
         self.layer.borderWidth = 1.0;
         self.layer.borderColor = [UIColor whiteColor].CGColor;
         
-        _segment1 = [UILabel makeLabelWithStr:itemsArray[0] fontSize:15.0 textColor:IM_NAVI_BLUE superView:self];
+        _segment1 = [UILabel makeLabelWithStr:itemsArray[0] fontSize:15.0 textColor:IM_NAVI_PINK superView:self];
         _segment1.userInteractionEnabled = YES;
         _segment1.backgroundColor = [UIColor whiteColor];
         UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(segmentTapped:)];
@@ -53,7 +53,7 @@
     if ([recognizer.view isEqual:_segment1]) {
         if (self.selectedIndex != 0) {
             _segment1.backgroundColor = [UIColor whiteColor];
-            _segment1.textColor = IM_NAVI_BLUE;
+            _segment1.textColor = IM_NAVI_PINK;
             _segment2.backgroundColor = [UIColor clearColor];
             _segment2.textColor = [UIColor whiteColor];
             _selectedIndex = 0;
@@ -65,7 +65,7 @@
     }else if ([recognizer.view isEqual:_segment2]){
         if (self.selectedIndex != 1) {
             _segment2.backgroundColor = [UIColor whiteColor];
-            _segment2.textColor = IM_NAVI_BLUE;
+            _segment2.textColor = IM_NAVI_PINK;
             _segment1.backgroundColor = [UIColor clearColor];
             _segment1.textColor = [UIColor whiteColor];
             _selectedIndex = 1;
@@ -81,12 +81,12 @@
         _selectedIndex = selectedIndex;
         if (self.selectedIndex == 0) {
             _segment1.backgroundColor = [UIColor whiteColor];
-            _segment1.textColor = IM_NAVI_BLUE;
+            _segment1.textColor = IM_NAVI_PINK;
             _segment2.backgroundColor = [UIColor clearColor];
             _segment2.textColor = [UIColor whiteColor];
         }else{
             _segment2.backgroundColor = [UIColor whiteColor];
-            _segment2.textColor = IM_NAVI_BLUE;
+            _segment2.textColor = IM_NAVI_PINK;
             _segment1.backgroundColor = [UIColor clearColor];
             _segment1.textColor = [UIColor whiteColor];
         }

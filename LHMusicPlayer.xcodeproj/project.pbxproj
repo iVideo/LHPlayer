@@ -13,8 +13,8 @@
 		CA32A56D191A5FA8005A9CAD /* AudioPlayerScrubberLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA32A56C191A5FA8005A9CAD /* AudioPlayerScrubberLeft@2x.png */; };
 		CA32A56F191A5FAD005A9CAD /* AudioPlayerScrubberRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA32A56E191A5FAD005A9CAD /* AudioPlayerScrubberRight@2x.png */; };
 		CA32A573191A6F2B005A9CAD /* GYJShareIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A572191A6F2B005A9CAD /* GYJShareIcon.m */; };
-		CA32A579191A7007005A9CAD /* NTESActivityToast.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A576191A7007005A9CAD /* NTESActivityToast.m */; };
-		CA32A57A191A7007005A9CAD /* NTESToast.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A578191A7007005A9CAD /* NTESToast.m */; };
+		CA32A579191A7007005A9CAD /* GYJActivityToast.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A576191A7007005A9CAD /* GYJActivityToast.m */; };
+		CA32A57A191A7007005A9CAD /* GYJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A578191A7007005A9CAD /* GYJToast.m */; };
 		CA32A59D191A7060005A9CAD /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A57F191A705F005A9CAD /* NSObject+SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CA32A59E191A7060005A9CAD /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A581191A705F005A9CAD /* NSString+SBJSON.m */; };
 		CA32A59F191A7060005A9CAD /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A583191A705F005A9CAD /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -27,11 +27,11 @@
 		CA32A5A6191A7060005A9CAD /* WBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A594191A7060005A9CAD /* WBUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CA32A5A7191A7060005A9CAD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA32A596191A7060005A9CAD /* libWeChatSDK.a */; };
 		CA32A5A8191A7060005A9CAD /* libYixinSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA32A59A191A7060005A9CAD /* libYixinSDK.a */; };
-		CA32A5AF191A70A0005A9CAD /* NTESNBOAuthLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5AC191A70A0005A9CAD /* NTESNBOAuthLoginController.m */; };
-		CA32A5B0191A70A0005A9CAD /* NTESNBShareNewMicroBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5AE191A70A0005A9CAD /* NTESNBShareNewMicroBlogViewController.m */; };
-		CA32A5C8191A7191005A9CAD /* NTESIMRenrenAuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5B3191A7191005A9CAD /* NTESIMRenrenAuthorViewController.m */; };
-		CA32A5C9191A7191005A9CAD /* NTESIMRenrenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5B6191A7191005A9CAD /* NTESIMRenrenManager.m */; };
-		CA32A5CA191A7191005A9CAD /* NTESIMShareRenrenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5B8191A7191005A9CAD /* NTESIMShareRenrenViewController.m */; };
+		CA32A5AF191A70A0005A9CAD /* GYJOAuthLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5AC191A70A0005A9CAD /* GYJOAuthLoginController.m */; };
+		CA32A5B0191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5AE191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m */; };
+		CA32A5C8191A7191005A9CAD /* GYJRenrenAuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5B3191A7191005A9CAD /* GYJRenrenAuthorViewController.m */; };
+		CA32A5C9191A7191005A9CAD /* GYJRenrenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5B6191A7191005A9CAD /* GYJRenrenManager.m */; };
+		CA32A5CA191A7191005A9CAD /* GYJShareRenrenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5B8191A7191005A9CAD /* GYJShareRenrenViewController.m */; };
 		CA32A5CB191A7191005A9CAD /* ROError.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5BB191A7191005A9CAD /* ROError.m */; };
 		CA32A5CC191A7191005A9CAD /* ROPublishPhotoRequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5BD191A7191005A9CAD /* ROPublishPhotoRequestParam.m */; };
 		CA32A5CD191A7191005A9CAD /* ROPublishPhotoResponseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5BF191A7191005A9CAD /* ROPublishPhotoResponseItem.m */; };
@@ -39,9 +39,9 @@
 		CA32A5CF191A7191005A9CAD /* RORequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5C3191A7191005A9CAD /* RORequestParam.m */; };
 		CA32A5D0191A7191005A9CAD /* ROResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5C5191A7191005A9CAD /* ROResponse.m */; };
 		CA32A5D1191A7191005A9CAD /* ROResponseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5C7191A7191005A9CAD /* ROResponseItem.m */; };
-		CA32A5D9191A71DB005A9CAD /* NTESMTencentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5D4191A71DB005A9CAD /* NTESMTencentManager.m */; };
-		CA32A5DA191A71DB005A9CAD /* NTESMTencentWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5D6191A71DB005A9CAD /* NTESMTencentWeiboViewController.m */; };
-		CA32A5DB191A71DB005A9CAD /* NTESTCOAuthLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5D8191A71DB005A9CAD /* NTESTCOAuthLoginController.m */; };
+		CA32A5D9191A71DB005A9CAD /* GYJTencentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5D4191A71DB005A9CAD /* GYJTencentManager.m */; };
+		CA32A5DA191A71DB005A9CAD /* GYJTencentWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5D6191A71DB005A9CAD /* GYJTencentWeiboViewController.m */; };
+		CA32A5DB191A71DB005A9CAD /* GYJTCOAuthLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5D8191A71DB005A9CAD /* GYJTCOAuthLoginController.m */; };
 		CA32A5DD191A7588005A9CAD /* ShareIcon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA32A5DC191A7588005A9CAD /* ShareIcon.bundle */; };
 		CA514A4D19129C0000FB66DB /* NavigationBack_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA514A4C19129C0000FB66DB /* NavigationBack_ios7@2x.png */; };
 		CA514A5219129F8400FB66DB /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CA514A4F19129F8400FB66DB /* SVProgressHUD.bundle */; };
@@ -118,6 +118,8 @@
 		CA65777C191E4D080075CE59 /* UIColor+RGBValues.m in Sources */ = {isa = PBXBuildFile; fileRef = CA65777A191E4D080075CE59 /* UIColor+RGBValues.m */; };
 		CA65777F191E58A50075CE59 /* LHDownloadedMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA65777E191E58A50075CE59 /* LHDownloadedMusicViewController.m */; };
 		CA657783191E59C60075CE59 /* GYJOnlineMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA657782191E59C60075CE59 /* GYJOnlineMusicController.m */; };
+		CA6EFE26191F5DE8003498AA /* GYJShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6EFE25191F5DE8003498AA /* GYJShareViewController.m */; };
+		CA6EFE29191F5EA0003498AA /* GYJShareWeixinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6EFE28191F5EA0003498AA /* GYJShareWeixinManager.m */; };
 		CA7DFD141914894A00B061AE /* cm_btn_listening_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7DFD121914894A00B061AE /* cm_btn_listening_prs@2x.png */; };
 		CA7DFD151914894A00B061AE /* cm_btn_listening@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7DFD131914894A00B061AE /* cm_btn_listening@2x.png */; };
 		CA7DFD1E1914BFA500B061AE /* SCLTAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7DFD181914BFA500B061AE /* SCLTAudioPlayer.m */; };
@@ -137,6 +139,10 @@
 		CADD48F1191A3BDC009034C1 /* GYJMusicCollectionDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD48F0191A3BDC009034C1 /* GYJMusicCollectionDataBase.m */; };
 		CADD48F5191A43AF009034C1 /* like_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADD48F3191A43AF009034C1 /* like_normal@2x.png */; };
 		CADD48F6191A43AF009034C1 /* like_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADD48F4191A43AF009034C1 /* like_selected@2x.png */; };
+		CAE40516191F688200DB3F09 /* GYJShareYixinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE40515191F688200DB3F09 /* GYJShareYixinManager.m */; };
+		CAE4051A191F68DC00DB3F09 /* GYJShareMailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE40519191F68DC00DB3F09 /* GYJShareMailManager.m */; };
+		CAE4051D191F693D00DB3F09 /* GYJMailComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE4051C191F693D00DB3F09 /* GYJMailComposeViewController.m */; };
+		CAE4051F191F73AF00DB3F09 /* button_share_send_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE4051E191F73AF00DB3F09 /* button_share_send_normal@2x.png */; };
 		CAEA8E4F19172421006DEFC7 /* base_top_navigation_edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAEA8E4E19172421006DEFC7 /* base_top_navigation_edit@2x.png */; };
 		CAEA8E5219173925006DEFC7 /* GYJRecordListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEA8E5119173925006DEFC7 /* GYJRecordListCell.m */; };
 		CAEE4E5A19121D5F00CCE46A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEE4E5919121D5F00CCE46A /* Foundation.framework */; };
@@ -172,11 +178,11 @@
 		CAEE4ED0191223C500CCE46A /* home_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAEE4ECF191223C500CCE46A /* home_3@2x.png */; };
 		CAEE4ED31912257400CCE46A /* GYJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4ED21912257400CCE46A /* GYJSettingViewController.m */; };
 		CAEE4ED6191228DD00CCE46A /* GYJUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4ED5191228DD00CCE46A /* GYJUserManager.m */; };
-		CAEE4EDC19122A2F00CCE46A /* LHUserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EDB19122A2F00CCE46A /* LHUserOperation.m */; };
-		CAEE4EDF19122A7900CCE46A /* LHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EDE19122A7900CCE46A /* LHUser.m */; };
+		CAEE4EDC19122A2F00CCE46A /* GYJUserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EDB19122A2F00CCE46A /* GYJUserOperation.m */; };
+		CAEE4EDF19122A7900CCE46A /* GYJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EDE19122A7900CCE46A /* GYJUser.m */; };
 		CAEE4EE419122C4600CCE46A /* NSData+ENBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EE119122C4600CCE46A /* NSData+ENBase64.m */; };
 		CAEE4EE519122C4600CCE46A /* NSData+QBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EE319122C4600CCE46A /* NSData+QBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CAEE4EE819122CD400CCE46A /* LHHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EE719122CD400CCE46A /* LHHTTPClient.m */; };
+		CAEE4EE819122CD400CCE46A /* GYJHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EE719122CD400CCE46A /* GYJHTTPClient.m */; };
 		CAEE4EEB19122E3C00CCE46A /* GYJJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EEA19122E3C00CCE46A /* GYJJSON.m */; };
 		CAEE4EF0191233B900CCE46A /* GYJSettingUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EEF191233B900CCE46A /* GYJSettingUserHeaderView.m */; };
 		CAEE4EF31912396A00CCE46A /* GYJMyLikeSongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAEE4EF21912396A00CCE46A /* GYJMyLikeSongsViewController.m */; };
@@ -228,10 +234,10 @@
 		CA32A56E191A5FAD005A9CAD /* AudioPlayerScrubberRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AudioPlayerScrubberRight@2x.png"; sourceTree = "<group>"; };
 		CA32A571191A6F2B005A9CAD /* GYJShareIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareIcon.h; sourceTree = "<group>"; };
 		CA32A572191A6F2B005A9CAD /* GYJShareIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareIcon.m; sourceTree = "<group>"; };
-		CA32A575191A7007005A9CAD /* NTESActivityToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESActivityToast.h; sourceTree = "<group>"; };
-		CA32A576191A7007005A9CAD /* NTESActivityToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESActivityToast.m; sourceTree = "<group>"; };
-		CA32A577191A7007005A9CAD /* NTESToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESToast.h; sourceTree = "<group>"; };
-		CA32A578191A7007005A9CAD /* NTESToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESToast.m; sourceTree = "<group>"; };
+		CA32A575191A7007005A9CAD /* GYJActivityToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJActivityToast.h; sourceTree = "<group>"; };
+		CA32A576191A7007005A9CAD /* GYJActivityToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJActivityToast.m; sourceTree = "<group>"; };
+		CA32A577191A7007005A9CAD /* GYJToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJToast.h; sourceTree = "<group>"; };
+		CA32A578191A7007005A9CAD /* GYJToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJToast.m; sourceTree = "<group>"; };
 		CA32A57D191A705F005A9CAD /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		CA32A57E191A705F005A9CAD /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		CA32A57F191A705F005A9CAD /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -260,17 +266,17 @@
 		CA32A59A191A7060005A9CAD /* libYixinSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYixinSDK.a; sourceTree = "<group>"; };
 		CA32A59B191A7060005A9CAD /* YXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApi.h; sourceTree = "<group>"; };
 		CA32A59C191A7060005A9CAD /* YXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApiObject.h; sourceTree = "<group>"; };
-		CA32A5AB191A70A0005A9CAD /* NTESNBOAuthLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESNBOAuthLoginController.h; sourceTree = "<group>"; };
-		CA32A5AC191A70A0005A9CAD /* NTESNBOAuthLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESNBOAuthLoginController.m; sourceTree = "<group>"; };
-		CA32A5AD191A70A0005A9CAD /* NTESNBShareNewMicroBlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESNBShareNewMicroBlogViewController.h; sourceTree = "<group>"; };
-		CA32A5AE191A70A0005A9CAD /* NTESNBShareNewMicroBlogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESNBShareNewMicroBlogViewController.m; sourceTree = "<group>"; };
-		CA32A5B2191A7191005A9CAD /* NTESIMRenrenAuthorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESIMRenrenAuthorViewController.h; sourceTree = "<group>"; };
-		CA32A5B3191A7191005A9CAD /* NTESIMRenrenAuthorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESIMRenrenAuthorViewController.m; sourceTree = "<group>"; };
-		CA32A5B4191A7191005A9CAD /* NTESIMRenrenCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESIMRenrenCommon.h; sourceTree = "<group>"; };
-		CA32A5B5191A7191005A9CAD /* NTESIMRenrenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESIMRenrenManager.h; sourceTree = "<group>"; };
-		CA32A5B6191A7191005A9CAD /* NTESIMRenrenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESIMRenrenManager.m; sourceTree = "<group>"; };
-		CA32A5B7191A7191005A9CAD /* NTESIMShareRenrenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESIMShareRenrenViewController.h; sourceTree = "<group>"; };
-		CA32A5B8191A7191005A9CAD /* NTESIMShareRenrenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESIMShareRenrenViewController.m; sourceTree = "<group>"; };
+		CA32A5AB191A70A0005A9CAD /* GYJOAuthLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJOAuthLoginController.h; sourceTree = "<group>"; };
+		CA32A5AC191A70A0005A9CAD /* GYJOAuthLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJOAuthLoginController.m; sourceTree = "<group>"; };
+		CA32A5AD191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareNewMicroBlogViewController.h; sourceTree = "<group>"; };
+		CA32A5AE191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareNewMicroBlogViewController.m; sourceTree = "<group>"; };
+		CA32A5B2191A7191005A9CAD /* GYJRenrenAuthorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJRenrenAuthorViewController.h; sourceTree = "<group>"; };
+		CA32A5B3191A7191005A9CAD /* GYJRenrenAuthorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJRenrenAuthorViewController.m; sourceTree = "<group>"; };
+		CA32A5B4191A7191005A9CAD /* GYJRenrenCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJRenrenCommon.h; sourceTree = "<group>"; };
+		CA32A5B5191A7191005A9CAD /* GYJRenrenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJRenrenManager.h; sourceTree = "<group>"; };
+		CA32A5B6191A7191005A9CAD /* GYJRenrenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJRenrenManager.m; sourceTree = "<group>"; };
+		CA32A5B7191A7191005A9CAD /* GYJShareRenrenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareRenrenViewController.h; sourceTree = "<group>"; };
+		CA32A5B8191A7191005A9CAD /* GYJShareRenrenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareRenrenViewController.m; sourceTree = "<group>"; };
 		CA32A5BA191A7191005A9CAD /* ROError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROError.h; sourceTree = "<group>"; };
 		CA32A5BB191A7191005A9CAD /* ROError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROError.m; sourceTree = "<group>"; };
 		CA32A5BC191A7191005A9CAD /* ROPublishPhotoRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROPublishPhotoRequestParam.h; sourceTree = "<group>"; };
@@ -285,12 +291,12 @@
 		CA32A5C5191A7191005A9CAD /* ROResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROResponse.m; sourceTree = "<group>"; };
 		CA32A5C6191A7191005A9CAD /* ROResponseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ROResponseItem.h; sourceTree = "<group>"; };
 		CA32A5C7191A7191005A9CAD /* ROResponseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ROResponseItem.m; sourceTree = "<group>"; };
-		CA32A5D3191A71DB005A9CAD /* NTESMTencentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESMTencentManager.h; sourceTree = "<group>"; };
-		CA32A5D4191A71DB005A9CAD /* NTESMTencentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESMTencentManager.m; sourceTree = "<group>"; };
-		CA32A5D5191A71DB005A9CAD /* NTESMTencentWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESMTencentWeiboViewController.h; sourceTree = "<group>"; };
-		CA32A5D6191A71DB005A9CAD /* NTESMTencentWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESMTencentWeiboViewController.m; sourceTree = "<group>"; };
-		CA32A5D7191A71DB005A9CAD /* NTESTCOAuthLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESTCOAuthLoginController.h; sourceTree = "<group>"; };
-		CA32A5D8191A71DB005A9CAD /* NTESTCOAuthLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESTCOAuthLoginController.m; sourceTree = "<group>"; };
+		CA32A5D3191A71DB005A9CAD /* GYJTencentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJTencentManager.h; sourceTree = "<group>"; };
+		CA32A5D4191A71DB005A9CAD /* GYJTencentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJTencentManager.m; sourceTree = "<group>"; };
+		CA32A5D5191A71DB005A9CAD /* GYJTencentWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJTencentWeiboViewController.h; sourceTree = "<group>"; };
+		CA32A5D6191A71DB005A9CAD /* GYJTencentWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJTencentWeiboViewController.m; sourceTree = "<group>"; };
+		CA32A5D7191A71DB005A9CAD /* GYJTCOAuthLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJTCOAuthLoginController.h; sourceTree = "<group>"; };
+		CA32A5D8191A71DB005A9CAD /* GYJTCOAuthLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJTCOAuthLoginController.m; sourceTree = "<group>"; };
 		CA32A5DC191A7588005A9CAD /* ShareIcon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareIcon.bundle; sourceTree = "<group>"; };
 		CA514A4C19129C0000FB66DB /* NavigationBack_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationBack_ios7@2x.png"; sourceTree = "<group>"; };
 		CA514A4F19129F8400FB66DB /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -393,6 +399,10 @@
 		CA65777E191E58A50075CE59 /* LHDownloadedMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHDownloadedMusicViewController.m; sourceTree = "<group>"; };
 		CA657781191E59C60075CE59 /* GYJOnlineMusicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJOnlineMusicController.h; sourceTree = "<group>"; };
 		CA657782191E59C60075CE59 /* GYJOnlineMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJOnlineMusicController.m; sourceTree = "<group>"; };
+		CA6EFE24191F5DE8003498AA /* GYJShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareViewController.h; sourceTree = "<group>"; };
+		CA6EFE25191F5DE8003498AA /* GYJShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareViewController.m; sourceTree = "<group>"; };
+		CA6EFE27191F5EA0003498AA /* GYJShareWeixinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GYJShareWeixinManager.h; path = Tencent/GYJShareWeixinManager.h; sourceTree = "<group>"; };
+		CA6EFE28191F5EA0003498AA /* GYJShareWeixinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GYJShareWeixinManager.m; path = Tencent/GYJShareWeixinManager.m; sourceTree = "<group>"; };
 		CA7DFD121914894A00B061AE /* cm_btn_listening_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_btn_listening_prs@2x.png"; sourceTree = "<group>"; };
 		CA7DFD131914894A00B061AE /* cm_btn_listening@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_btn_listening@2x.png"; sourceTree = "<group>"; };
 		CA7DFD171914BFA500B061AE /* SCLTAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTAudioPlayer.h; sourceTree = "<group>"; };
@@ -424,6 +434,13 @@
 		CADD48F0191A3BDC009034C1 /* GYJMusicCollectionDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJMusicCollectionDataBase.m; sourceTree = "<group>"; };
 		CADD48F3191A43AF009034C1 /* like_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like_normal@2x.png"; sourceTree = "<group>"; };
 		CADD48F4191A43AF009034C1 /* like_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like_selected@2x.png"; sourceTree = "<group>"; };
+		CAE40514191F688200DB3F09 /* GYJShareYixinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareYixinManager.h; sourceTree = "<group>"; };
+		CAE40515191F688200DB3F09 /* GYJShareYixinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareYixinManager.m; sourceTree = "<group>"; };
+		CAE40518191F68DC00DB3F09 /* GYJShareMailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareMailManager.h; sourceTree = "<group>"; };
+		CAE40519191F68DC00DB3F09 /* GYJShareMailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareMailManager.m; sourceTree = "<group>"; };
+		CAE4051B191F693D00DB3F09 /* GYJMailComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJMailComposeViewController.h; sourceTree = "<group>"; };
+		CAE4051C191F693D00DB3F09 /* GYJMailComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJMailComposeViewController.m; sourceTree = "<group>"; };
+		CAE4051E191F73AF00DB3F09 /* button_share_send_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_share_send_normal@2x.png"; sourceTree = "<group>"; };
 		CAEA8E4E19172421006DEFC7 /* base_top_navigation_edit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "base_top_navigation_edit@2x.png"; sourceTree = "<group>"; };
 		CAEA8E5019173925006DEFC7 /* GYJRecordListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJRecordListCell.h; sourceTree = "<group>"; };
 		CAEA8E5119173925006DEFC7 /* GYJRecordListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJRecordListCell.m; sourceTree = "<group>"; };
@@ -480,16 +497,16 @@
 		CAEE4ED21912257400CCE46A /* GYJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJSettingViewController.m; sourceTree = "<group>"; };
 		CAEE4ED4191228DD00CCE46A /* GYJUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJUserManager.h; sourceTree = "<group>"; };
 		CAEE4ED5191228DD00CCE46A /* GYJUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJUserManager.m; sourceTree = "<group>"; };
-		CAEE4EDA19122A2F00CCE46A /* LHUserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUserOperation.h; sourceTree = "<group>"; };
-		CAEE4EDB19122A2F00CCE46A /* LHUserOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHUserOperation.m; sourceTree = "<group>"; };
-		CAEE4EDD19122A7900CCE46A /* LHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHUser.h; sourceTree = "<group>"; };
-		CAEE4EDE19122A7900CCE46A /* LHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHUser.m; sourceTree = "<group>"; };
+		CAEE4EDA19122A2F00CCE46A /* GYJUserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJUserOperation.h; sourceTree = "<group>"; };
+		CAEE4EDB19122A2F00CCE46A /* GYJUserOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJUserOperation.m; sourceTree = "<group>"; };
+		CAEE4EDD19122A7900CCE46A /* GYJUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJUser.h; sourceTree = "<group>"; };
+		CAEE4EDE19122A7900CCE46A /* GYJUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJUser.m; sourceTree = "<group>"; };
 		CAEE4EE019122C4600CCE46A /* NSData+ENBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ENBase64.h"; sourceTree = "<group>"; };
 		CAEE4EE119122C4600CCE46A /* NSData+ENBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ENBase64.m"; sourceTree = "<group>"; };
 		CAEE4EE219122C4600CCE46A /* NSData+QBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+QBase64.h"; sourceTree = "<group>"; };
 		CAEE4EE319122C4600CCE46A /* NSData+QBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+QBase64.m"; sourceTree = "<group>"; };
-		CAEE4EE619122CD400CCE46A /* LHHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHTTPClient.h; sourceTree = "<group>"; };
-		CAEE4EE719122CD400CCE46A /* LHHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHTTPClient.m; sourceTree = "<group>"; };
+		CAEE4EE619122CD400CCE46A /* GYJHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJHTTPClient.h; sourceTree = "<group>"; };
+		CAEE4EE719122CD400CCE46A /* GYJHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJHTTPClient.m; sourceTree = "<group>"; };
 		CAEE4EE919122E3C00CCE46A /* GYJJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJJSON.h; sourceTree = "<group>"; };
 		CAEE4EEA19122E3C00CCE46A /* GYJJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJJSON.m; sourceTree = "<group>"; };
 		CAEE4EEE191233B900CCE46A /* GYJSettingUserHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJSettingUserHeaderView.h; sourceTree = "<group>"; };
@@ -598,10 +615,10 @@
 		CA32A574191A7007005A9CAD /* ActivityToast */ = {
 			isa = PBXGroup;
 			children = (
-				CA32A575191A7007005A9CAD /* NTESActivityToast.h */,
-				CA32A576191A7007005A9CAD /* NTESActivityToast.m */,
-				CA32A577191A7007005A9CAD /* NTESToast.h */,
-				CA32A578191A7007005A9CAD /* NTESToast.m */,
+				CA32A575191A7007005A9CAD /* GYJActivityToast.h */,
+				CA32A576191A7007005A9CAD /* GYJActivityToast.m */,
+				CA32A577191A7007005A9CAD /* GYJToast.h */,
+				CA32A578191A7007005A9CAD /* GYJToast.m */,
 			);
 			path = ActivityToast;
 			sourceTree = "<group>";
@@ -684,6 +701,9 @@
 		CA32A5A9191A7095005A9CAD /* 分享 */ = {
 			isa = PBXGroup;
 			children = (
+				CAE40517191F68CE00DB3F09 /* Mail */,
+				CAE40513191F686300DB3F09 /* 易信 */,
+				CAE40512191F685C00DB3F09 /* 微信 */,
 				CA32A5D2191A71DB005A9CAD /* Tencent */,
 				CA32A5B1191A7191005A9CAD /* Renren */,
 				CA32A5AA191A70A0005A9CAD /* Sina */,
@@ -695,10 +715,10 @@
 		CA32A5AA191A70A0005A9CAD /* Sina */ = {
 			isa = PBXGroup;
 			children = (
-				CA32A5AB191A70A0005A9CAD /* NTESNBOAuthLoginController.h */,
-				CA32A5AC191A70A0005A9CAD /* NTESNBOAuthLoginController.m */,
-				CA32A5AD191A70A0005A9CAD /* NTESNBShareNewMicroBlogViewController.h */,
-				CA32A5AE191A70A0005A9CAD /* NTESNBShareNewMicroBlogViewController.m */,
+				CA32A5AB191A70A0005A9CAD /* GYJOAuthLoginController.h */,
+				CA32A5AC191A70A0005A9CAD /* GYJOAuthLoginController.m */,
+				CA32A5AD191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.h */,
+				CA32A5AE191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m */,
 			);
 			path = Sina;
 			sourceTree = "<group>";
@@ -706,13 +726,13 @@
 		CA32A5B1191A7191005A9CAD /* Renren */ = {
 			isa = PBXGroup;
 			children = (
-				CA32A5B2191A7191005A9CAD /* NTESIMRenrenAuthorViewController.h */,
-				CA32A5B3191A7191005A9CAD /* NTESIMRenrenAuthorViewController.m */,
-				CA32A5B4191A7191005A9CAD /* NTESIMRenrenCommon.h */,
-				CA32A5B5191A7191005A9CAD /* NTESIMRenrenManager.h */,
-				CA32A5B6191A7191005A9CAD /* NTESIMRenrenManager.m */,
-				CA32A5B7191A7191005A9CAD /* NTESIMShareRenrenViewController.h */,
-				CA32A5B8191A7191005A9CAD /* NTESIMShareRenrenViewController.m */,
+				CA32A5B2191A7191005A9CAD /* GYJRenrenAuthorViewController.h */,
+				CA32A5B3191A7191005A9CAD /* GYJRenrenAuthorViewController.m */,
+				CA32A5B4191A7191005A9CAD /* GYJRenrenCommon.h */,
+				CA32A5B5191A7191005A9CAD /* GYJRenrenManager.h */,
+				CA32A5B6191A7191005A9CAD /* GYJRenrenManager.m */,
+				CA32A5B7191A7191005A9CAD /* GYJShareRenrenViewController.h */,
+				CA32A5B8191A7191005A9CAD /* GYJShareRenrenViewController.m */,
 				CA32A5B9191A7191005A9CAD /* RenrenSDK */,
 			);
 			path = Renren;
@@ -742,12 +762,12 @@
 		CA32A5D2191A71DB005A9CAD /* Tencent */ = {
 			isa = PBXGroup;
 			children = (
-				CA32A5D3191A71DB005A9CAD /* NTESMTencentManager.h */,
-				CA32A5D4191A71DB005A9CAD /* NTESMTencentManager.m */,
-				CA32A5D5191A71DB005A9CAD /* NTESMTencentWeiboViewController.h */,
-				CA32A5D6191A71DB005A9CAD /* NTESMTencentWeiboViewController.m */,
-				CA32A5D7191A71DB005A9CAD /* NTESTCOAuthLoginController.h */,
-				CA32A5D8191A71DB005A9CAD /* NTESTCOAuthLoginController.m */,
+				CA32A5D3191A71DB005A9CAD /* GYJTencentManager.h */,
+				CA32A5D4191A71DB005A9CAD /* GYJTencentManager.m */,
+				CA32A5D5191A71DB005A9CAD /* GYJTencentWeiboViewController.h */,
+				CA32A5D6191A71DB005A9CAD /* GYJTencentWeiboViewController.m */,
+				CA32A5D7191A71DB005A9CAD /* GYJTCOAuthLoginController.h */,
+				CA32A5D8191A71DB005A9CAD /* GYJTCOAuthLoginController.m */,
 			);
 			path = Tencent;
 			sourceTree = "<group>";
@@ -765,6 +785,7 @@
 		CA514A721912A91C00FB66DB /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				CAE4051E191F73AF00DB3F09 /* button_share_send_normal@2x.png */,
 				CADD48F2191A43A8009034C1 /* like */,
 				CAEA8E4E19172421006DEFC7 /* base_top_navigation_edit@2x.png */,
 				CA7DFD211914C3BB00B061AE /* PlayButton */,
@@ -858,13 +879,13 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
-		CA537CA31912743300663F67 /* UserInfo */ = {
+		CA537CA31912743300663F67 /* 个人首页 */ = {
 			isa = PBXGroup;
 			children = (
 				CA537CA41912745800663F67 /* GYJUserInfoViewController.h */,
 				CA537CA51912745800663F67 /* GYJUserInfoViewController.m */,
 			);
-			name = UserInfo;
+			name = "个人首页";
 			sourceTree = "<group>";
 		};
 		CA65774D191E01A30075CE59 /* 在线音乐搜索 */ = {
@@ -927,6 +948,15 @@
 				CA65774F191E01E40075CE59 /* GYJMusicSearchViewController.m */,
 			);
 			name = "在线音乐搜索";
+			sourceTree = "<group>";
+		};
+		CA6EFE23191F5DD4003498AA /* 分享 */ = {
+			isa = PBXGroup;
+			children = (
+				CA6EFE24191F5DE8003498AA /* GYJShareViewController.h */,
+				CA6EFE25191F5DE8003498AA /* GYJShareViewController.m */,
+			);
+			name = "分享";
 			sourceTree = "<group>";
 		};
 		CA7DFD161914BFA500B061AE /* SCLTAudioPlayer */ = {
@@ -1025,6 +1055,35 @@
 			name = like;
 			sourceTree = "<group>";
 		};
+		CAE40512191F685C00DB3F09 /* 微信 */ = {
+			isa = PBXGroup;
+			children = (
+				CA6EFE27191F5EA0003498AA /* GYJShareWeixinManager.h */,
+				CA6EFE28191F5EA0003498AA /* GYJShareWeixinManager.m */,
+			);
+			name = "微信";
+			sourceTree = "<group>";
+		};
+		CAE40513191F686300DB3F09 /* 易信 */ = {
+			isa = PBXGroup;
+			children = (
+				CAE40514191F688200DB3F09 /* GYJShareYixinManager.h */,
+				CAE40515191F688200DB3F09 /* GYJShareYixinManager.m */,
+			);
+			name = "易信";
+			sourceTree = "<group>";
+		};
+		CAE40517191F68CE00DB3F09 /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				CAE40518191F68DC00DB3F09 /* GYJShareMailManager.h */,
+				CAE40519191F68DC00DB3F09 /* GYJShareMailManager.m */,
+				CAE4051B191F693D00DB3F09 /* GYJMailComposeViewController.h */,
+				CAE4051C191F693D00DB3F09 /* GYJMailComposeViewController.m */,
+			);
+			name = Mail;
+			sourceTree = "<group>";
+		};
 		CAEE4E4D19121D5F00CCE46A = {
 			isa = PBXGroup;
 			children = (
@@ -1113,6 +1172,7 @@
 		CAEE4E8E19121D7E00CCE46A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CA6EFE23191F5DD4003498AA /* 分享 */,
 				CA65774D191E01A30075CE59 /* 在线音乐搜索 */,
 				CADD48ED191A3868009034C1 /* 录歌播放器 */,
 				CADD48EC191A3857009034C1 /* 点歌 */,
@@ -1120,7 +1180,7 @@
 				CADD48E7191A31B5009034C1 /* 系统音乐库 */,
 				CAFC690B191363C500645725 /* 设置 */,
 				CAFC68F019133D1900645725 /* 系统音乐播放器 */,
-				CA537CA31912743300663F67 /* UserInfo */,
+				CA537CA31912743300663F67 /* 个人首页 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1255,12 +1315,12 @@
 			children = (
 				CAEE4ED4191228DD00CCE46A /* GYJUserManager.h */,
 				CAEE4ED5191228DD00CCE46A /* GYJUserManager.m */,
-				CAEE4EDD19122A7900CCE46A /* LHUser.h */,
-				CAEE4EDE19122A7900CCE46A /* LHUser.m */,
-				CAEE4EDA19122A2F00CCE46A /* LHUserOperation.h */,
-				CAEE4EDB19122A2F00CCE46A /* LHUserOperation.m */,
-				CAEE4EE619122CD400CCE46A /* LHHTTPClient.h */,
-				CAEE4EE719122CD400CCE46A /* LHHTTPClient.m */,
+				CAEE4EDD19122A7900CCE46A /* GYJUser.h */,
+				CAEE4EDE19122A7900CCE46A /* GYJUser.m */,
+				CAEE4EDA19122A2F00CCE46A /* GYJUserOperation.h */,
+				CAEE4EDB19122A2F00CCE46A /* GYJUserOperation.m */,
+				CAEE4EE619122CD400CCE46A /* GYJHTTPClient.h */,
+				CAEE4EE719122CD400CCE46A /* GYJHTTPClient.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -1475,6 +1535,7 @@
 				CA514A691912A29400FB66DB /* camera_cancel@2x.png in Resources */,
 				CA514A5D1912A27400FB66DB /* user_profile_edit_avator@2x.png in Resources */,
 				CA514A5219129F8400FB66DB /* SVProgressHUD.bundle in Resources */,
+				CAE4051F191F73AF00DB3F09 /* button_share_send_normal@2x.png in Resources */,
 				CAEE4ECA19121F7F00CCE46A /* home_4@2x.png in Resources */,
 				CA514A6B1912A29400FB66DB /* camera_flashlight_on@2x.png in Resources */,
 				CA537C4919123CA100663F67 /* cell_detail_indicator@2x.png in Resources */,
@@ -1538,7 +1599,7 @@
 			files = (
 				CAEE4EFC191239D700CCE46A /* GYJOtherPlatformViewController.m in Sources */,
 				CA537C911912456700663F67 /* GYJUserLoginViewController.m in Sources */,
-				CA32A5DB191A71DB005A9CAD /* NTESTCOAuthLoginController.m in Sources */,
+				CA32A5DB191A71DB005A9CAD /* GYJTCOAuthLoginController.m in Sources */,
 				CA32A59E191A7060005A9CAD /* NSString+SBJSON.m in Sources */,
 				CA537C9E1912732D00663F67 /* GYJPhotoPickerController.m in Sources */,
 				CA32A5A6191A7060005A9CAD /* WBUtil.m in Sources */,
@@ -1564,7 +1625,7 @@
 				CA657783191E59C60075CE59 /* GYJOnlineMusicController.m in Sources */,
 				CA514A5319129F8400FB66DB /* SVProgressHUD.m in Sources */,
 				CADD48EA191A3301009034C1 /* GYJSystemMusicLibraryController.m in Sources */,
-				CA32A5C9191A7191005A9CAD /* NTESIMRenrenManager.m in Sources */,
+				CA32A5C9191A7191005A9CAD /* GYJRenrenManager.m in Sources */,
 				CA7DFD201914BFA500B061AE /* SCLTMediaItem.m in Sources */,
 				CA537CA61912745800663F67 /* GYJUserInfoViewController.m in Sources */,
 				CAEE4EB819121EAD00CCE46A /* NSDictionary+Extened.m in Sources */,
@@ -1578,14 +1639,15 @@
 				CAEE4E6619121D5F00CCE46A /* main.m in Sources */,
 				CAEE4EE519122C4600CCE46A /* NSData+QBase64.m in Sources */,
 				CAEE4E9719121DE100CCE46A /* GYJMainBaseViewController.m in Sources */,
-				CA32A579191A7007005A9CAD /* NTESActivityToast.m in Sources */,
+				CA32A579191A7007005A9CAD /* GYJActivityToast.m in Sources */,
 				CAEE4E9619121DE100CCE46A /* GYJHomeController.m in Sources */,
 				CA32A5D0191A7191005A9CAD /* ROResponse.m in Sources */,
 				CACEF08819185BEF0011733C /* GYJOperationManager.m in Sources */,
-				CAEE4EDF19122A7900CCE46A /* LHUser.m in Sources */,
+				CAEE4EDF19122A7900CCE46A /* GYJUser.m in Sources */,
 				CA32A5A3191A7060005A9CAD /* WBAuthorize.m in Sources */,
 				CA657758191E0DB70075CE59 /* GYJMusicSearchCell.m in Sources */,
 				CA32A5CB191A7191005A9CAD /* ROError.m in Sources */,
+				CA6EFE29191F5EA0003498AA /* GYJShareWeixinManager.m in Sources */,
 				CAFC691B1913946D00645725 /* GYJRoundView.m in Sources */,
 				CA537C5319123CF800663F67 /* SevenSwitch.m in Sources */,
 				CA65777B191E4D080075CE59 /* LDProgressView.m in Sources */,
@@ -1594,18 +1656,19 @@
 				CAEF7CD5191646AF00D7F095 /* GYJRecorderListController.m in Sources */,
 				CA65777C191E4D080075CE59 /* UIColor+RGBValues.m in Sources */,
 				CA537C9D1912732D00663F67 /* GYJImageCropController.m in Sources */,
-				CA32A57A191A7007005A9CAD /* NTESToast.m in Sources */,
-				CAEE4EE819122CD400CCE46A /* LHHTTPClient.m in Sources */,
-				CA32A5CA191A7191005A9CAD /* NTESIMShareRenrenViewController.m in Sources */,
+				CA32A57A191A7007005A9CAD /* GYJToast.m in Sources */,
+				CAEE4EE819122CD400CCE46A /* GYJHTTPClient.m in Sources */,
+				CA32A5CA191A7191005A9CAD /* GYJShareRenrenViewController.m in Sources */,
 				CA32A5CD191A7191005A9CAD /* ROPublishPhotoResponseItem.m in Sources */,
 				CAEA8E5219173925006DEFC7 /* GYJRecordListCell.m in Sources */,
 				CA65777F191E58A50075CE59 /* LHDownloadedMusicViewController.m in Sources */,
 				CAEE4E9A19121E0700CCE46A /* GYJTabBarView.m in Sources */,
 				CA657750191E01E40075CE59 /* GYJMusicSearchViewController.m in Sources */,
-				CAEE4EDC19122A2F00CCE46A /* LHUserOperation.m in Sources */,
+				CAEE4EDC19122A2F00CCE46A /* GYJUserOperation.m in Sources */,
 				CA537C9B1912732D00663F67 /* GYJCameraCantainer.m in Sources */,
+				CAE4051D191F693D00DB3F09 /* GYJMailComposeViewController.m in Sources */,
 				CAFC68F319133D3500645725 /* GYJMusicPlayerController.m in Sources */,
-				CA32A5DA191A71DB005A9CAD /* NTESMTencentWeiboViewController.m in Sources */,
+				CA32A5DA191A71DB005A9CAD /* GYJTencentWeiboViewController.m in Sources */,
 				CACEF08E1918608A0011733C /* GYJMusicOperationManager.m in Sources */,
 				CA30A77F191A5C5200E30B80 /* GYJLikeMusicCell.m in Sources */,
 				CA537C4F19123CCA00663F67 /* GYJSettingSwitchCell.m in Sources */,
@@ -1619,13 +1682,15 @@
 				CAEE4EC219121EAD00CCE46A /* UIView+Shake.m in Sources */,
 				CAEE4EF0191233B900CCE46A /* GYJSettingUserHeaderView.m in Sources */,
 				CAEE4EC119121EAD00CCE46A /* UIView+Frame.m in Sources */,
-				CA32A5AF191A70A0005A9CAD /* NTESNBOAuthLoginController.m in Sources */,
+				CA32A5AF191A70A0005A9CAD /* GYJOAuthLoginController.m in Sources */,
 				CA32A5CC191A7191005A9CAD /* ROPublishPhotoRequestParam.m in Sources */,
 				CA537C4219123C5000663F67 /* GYJCell.m in Sources */,
 				CAEE4EBE19121EAD00CCE46A /* UITableView+DataSourceBlock.m in Sources */,
 				CAEE4EBB19121EAD00CCE46A /* UIImage+Extened.m in Sources */,
 				CAEE4E9D19121E6E00CCE46A /* GYJCommon.m in Sources */,
 				CA7DFD1E1914BFA500B061AE /* SCLTAudioPlayer.m in Sources */,
+				CAE4051A191F68DC00DB3F09 /* GYJShareMailManager.m in Sources */,
+				CA6EFE26191F5DE8003498AA /* GYJShareViewController.m in Sources */,
 				CA32A59D191A7060005A9CAD /* NSObject+SBJSON.m in Sources */,
 				CAEF7CCF19162D1300D7F095 /* UIView+Shadow.m in Sources */,
 				CA32A5A1191A7060005A9CAD /* SBJsonWriter.m in Sources */,
@@ -1636,10 +1701,11 @@
 				CAEE4EB919121EAD00CCE46A /* UIButton+Category.m in Sources */,
 				CAEE4EF9191239B000CCE46A /* GYJFriendSharedSongsViewController.m in Sources */,
 				CA514A591912A24900FB66DB /* GYJUserHeaderView.m in Sources */,
-				CA32A5C8191A7191005A9CAD /* NTESIMRenrenAuthorViewController.m in Sources */,
-				CA32A5B0191A70A0005A9CAD /* NTESNBShareNewMicroBlogViewController.m in Sources */,
+				CA32A5C8191A7191005A9CAD /* GYJRenrenAuthorViewController.m in Sources */,
+				CA32A5B0191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m in Sources */,
 				CAEE4EBC19121EAD00CCE46A /* UILabel+Custom.m in Sources */,
-				CA32A5D9191A71DB005A9CAD /* NTESMTencentManager.m in Sources */,
+				CA32A5D9191A71DB005A9CAD /* GYJTencentManager.m in Sources */,
+				CAE40516191F688200DB3F09 /* GYJShareYixinManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

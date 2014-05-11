@@ -43,4 +43,5 @@
 #import "SCLTAudioPlayer.h"
 #import "ILTranslucentView.h"
 #import "YLProgressBar.h"
+#import "WXApi.h"
 #endif

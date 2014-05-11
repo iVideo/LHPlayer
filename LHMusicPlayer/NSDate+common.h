@@ -2,7 +2,7 @@
 //  NSDate+common.h
 //  PluginLib
 //
-//  Created by 范 岩峰 on 13-12-23.
+//  Created by 郭亚娟 on 13-12-23.
 //  Copyright (c) 2013年 NetEase.com, Inc. All rights reserved.
 //
 

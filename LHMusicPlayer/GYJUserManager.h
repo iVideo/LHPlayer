@@ -1,14 +1,14 @@
 //
 //  LHUserManager.h
-//  LHMusicPlayer
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-5-1.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "LHUserOperation.h"
-@class LHUser;
+#import "GYJUserOperation.h"
+@class GYJUser;
 
 @class GYJUserManager;
 @protocol LHUserManagerDelegate <NSObject>
@@ -21,7 +21,7 @@
 @interface GYJUserManager : NSObject<NSURLConnectionDelegate,NSURLConnectionDataDelegate,LHUserOperationDelegate>
 
 @property (nonatomic, weak) NSObject <LHUserManagerDelegate> *delegate;
-@property (nonatomic, strong) LHUser *currentUser;
+@property (nonatomic, strong) GYJUser *currentUser;
 
 + (GYJUserManager *)defaultManager __attribute__((const));
 - (void)loginNeteaseWithUsername:(NSString *)username password:(NSString *)password;

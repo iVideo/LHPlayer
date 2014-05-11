@@ -1,9 +1,9 @@
 //
 //  GYJMusicPlayerController.m
-//  LHMusicPlayer
+//  GYJMusicPlayer
 //
-//  Created by LiHang on 14-5-2.
-//  Copyright (c) 2014年 LiHang. All rights reserved.
+//  Created by 郭亚娟 on 14-5-2.
+//  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 
 #import "GYJMusicPlayerController.h"
@@ -150,7 +150,7 @@ const CGFloat roundViewWidth = 200;
     
     //最下面view
     self.bottomView = [UIView new];
-    _bottomView.backgroundColor = IM_NAVI_BLUE;
+    _bottomView.backgroundColor = IM_NAVI_PINK;
     [self.view addSubview:_bottomView];
     
     [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -1,9 +1,9 @@
 //
 //  GYJRecorderListController.m
-//  LHMusicPlayer
+//  GYJMusicPlayer
 //
-//  Created by LiHang on 14-5-4.
-//  Copyright (c) 2014年 LiHang. All rights reserved.
+//  Created by 郭亚娟 on 14-5-4.
+//  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 
 #import "GYJRecorderListController.h"

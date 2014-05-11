@@ -1,9 +1,9 @@
 //
-//  NTESIMShareIcon.h
-//  iMoney
+//  GYJIMShareIcon.h
+//  GYJMusicPlayer
 //
-//  Created by LiHang on 14-3-14.
-//  Copyright (c) 2014年 NetEase. All rights reserved.
+//  Created by 郭亚娟 on 14-3-14.
+//  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 //  第三方平台绑定按钮
 //

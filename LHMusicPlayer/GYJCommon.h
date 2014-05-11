@@ -1,6 +1,6 @@
 //
-//  LHCommon.h
-//  LHAD
+//  GYJCommon.h
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-4-29.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
@@ -47,7 +47,7 @@ return __singleton__; \
 #define isiPhone5 CGSizeEqualToSize([[UIScreen mainScreen] preferredMode].size,CGSizeMake(640, 1136))
 
 // color
-#define IM_NAVI_BLUE [UIColor colorWithHexString:@"C48FBD"]//RGBCOLOR(0, 24, 64)
+#define IM_NAVI_PINK [UIColor colorWithHexString:@"C48FBD"]//RGBCOLOR(0, 24, 64)
 #define IM_DARK_BLUE RGBCOLOR(13, 23, 41)
 #define IM_LIGHT_BLUE RGBCOLOR(198, 212, 234)
 #define IM_240_GRAY RGBCOLOR(240, 240, 240)

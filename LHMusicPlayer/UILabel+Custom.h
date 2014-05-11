@@ -2,8 +2,8 @@
 //  UILabel+Custom.h
 //  TestCode
 //
-//  Created by Gavin Zeng on 14-2-17.
-//  Copyright (c) 2014年 Gavin Zeng. All rights reserved.
+//  Created by 郭亚娟 on 14-2-17.
+//  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,9 +1,8 @@
 //
-//  NTESNBJSON.m
-//  NewsBoard
+//  GYJNBJSON.m
 //
-//  Created by Peter Liu on 11/12/12.
-//  Copyright (c) 2012 NetEase.com, Inc. All rights reserved.
+//  Created by 郭亚娟 on 11/12/12.
+//  Copyright (c) 2012 郭亚娟.com, Inc. All rights reserved.
 //
 
 #import "GYJJSON.h"

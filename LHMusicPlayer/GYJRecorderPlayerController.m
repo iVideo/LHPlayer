@@ -1,12 +1,13 @@
 //
 //  GYJRecorderPlayerController.m
-//  LHMusicPlayer
+//  GYJMusicPlayer
 //
-//  Created by LiHang on 14-5-4.
-//  Copyright (c) 2014年 LiHang. All rights reserved.
+//  Created by 郭亚娟 on 14-5-4.
+//  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 
 #import "GYJRecorderPlayerController.h"
+#import "GYJShareViewController.h"
 
 @interface GYJRecorderPlayerController ()<AVAudioPlayerDelegate>
 
@@ -15,6 +16,8 @@
 
 @property (nonatomic, strong) UIImageView *recordBackgroundView;
 @property (nonatomic, strong) UIImageView *infoView;
+
+@property (nonatomic, strong) UIButton *shareButton;
 @end
 
 @implementation GYJRecorderPlayerController
@@ -60,16 +63,31 @@
     
     
     self.infoView = [UIImageView new];
-    
     _infoView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"material"]];
-    
     [self.view addSubview:_infoView];
+    
+    self.shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_shareButton setBackgroundImage:[UIImage imageNamed:@"4words_button_normal"] forState:UIControlStateNormal];
+    [_shareButton setBackgroundImage:[UIImage imageNamed:@"4words_button_press"] forState:UIControlStateHighlighted];
+    [_shareButton setTitle:@"分享" forState:UIControlStateNormal];
+    [self.view addSubview:_shareButton];
+    __weak typeof(self) weakSelf = self;
+    [_shareButton addAction:^(UIButton *btn) {
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+        GYJShareViewController *shareController = [[GYJShareViewController alloc] initWithShareContent:[NSString stringWithFormat:@"我刚点了一首歌曲：//%@,赶快来听听吧~",[[strongSelf->_fileURL lastPathComponent] stringByDeletingPathExtension]] shareImage:[UIImage imageNamed:@"record_song_bg@2x.jpg"]];
+        [strongSelf presentPanelSheetController:shareController];
+    } forControlEvents:UIControlEventTouchUpInside];
     
     [_infoView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left);
         make.width.equalTo(self.view.mas_width);
         make.bottom.equalTo(self.view.mas_bottom);
         make.height.equalTo(@80);
+    }];
+    
+    [_shareButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(_infoView.mas_centerX);
+        make.centerY.equalTo(_infoView.mas_centerY);
     }];
     
     [_recordBackgroundView mas_makeConstraints:^(MASConstraintMaker *make) {

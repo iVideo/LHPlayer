@@ -1,6 +1,6 @@
 //
 //  UIView+Shake.m
-//  iMoney
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-4-8.
 //  Copyright (c) 2014年 NetEase. All rights reserved.

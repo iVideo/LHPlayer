@@ -6,7 +6,7 @@
 //  - Powered by Team Pegasus. -
 //
 #import "RORequestParam.h"
-#import "NTESIMRenrenCommon.h"
+#import "GYJRenrenCommon.h"
 #import "ROError.h"
 
 @implementation RORequestParam

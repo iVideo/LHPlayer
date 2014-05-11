@@ -1,9 +1,9 @@
 //
-//  NTESIMSettingBaseCell.h
-//  iMoney
+//  GYJIMSettingBaseCell.h
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-2-25.
-//  Copyright (c) 2014年 NetEase. All rights reserved.
+//  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 //  设置页默认cell，左边一个label
 //

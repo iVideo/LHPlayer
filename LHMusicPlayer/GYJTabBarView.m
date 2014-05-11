@@ -1,6 +1,6 @@
 //
-//  LHTabBarView.m
-//  LHAD
+//  GYJTabBarView.m
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-4-29.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
@@ -27,7 +27,7 @@
         // Initialization code
         _tabButtonsArray = [[NSMutableArray alloc] initWithCapacity:4];
         UIImageView *bg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        bg.backgroundColor = IM_NAVI_BLUE;
+        bg.backgroundColor = IM_NAVI_PINK;
         [self addSubview:bg];
         
         _currentIndex = 0;

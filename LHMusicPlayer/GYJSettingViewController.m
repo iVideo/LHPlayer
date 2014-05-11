@@ -1,6 +1,6 @@
 //
-//  LHSettingViewController.m
-//  LHMusicPlayer
+//  GYJSettingViewController.m
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-5-1.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
@@ -17,9 +17,9 @@
 #import "GYJSettingDetailCell.h"
 #import "GYJSettingSwitchCell.h"
 
-#import "NTESMTencentManager.h"
-#import "NTESIMRenrenManager.h"
-#import "NTESNBShareNewMicroBlogViewController.h"
+#import "GYJTencentManager.h"
+#import "GYJRenrenManager.h"
+#import "GYJShareNewMicroBlogViewController.h"
 
 @interface GYJSettingViewController ()
 @property (nonatomic, strong) UITableView *contentTableView;
@@ -178,9 +178,9 @@
         }
             break;
         case SettingSectionCellTypeBindOtherPlatform:{
-            NSString *renrenIcon = [[NTESIMRenrenManager shareInstance] isSessionValid] ? @"renren" : nil;
-            NSString *sinaIcon = [NTESNBShareNewMicroBlogViewController isSinaWeiboBinded] ? @"sina" : nil;
-            NSString *tentcentIcon = [[NTESMTencentManager shareInstance] isTencenWeiboBinded] ? @"tencent" : nil;
+            NSString *renrenIcon = [[GYJRenrenManager shareInstance] isSessionValid] ? @"renren" : nil;
+            NSString *sinaIcon = [GYJShareNewMicroBlogViewController isSinaWeiboBinded] ? @"sina" : nil;
+            NSString *tentcentIcon = [[GYJTencentManager shareInstance] isTencenWeiboBinded] ? @"tencent" : nil;
             NSMutableArray *icons = [NSMutableArray arrayWithCapacity:4];
             if (sinaIcon) {
                 [icons addObject:sinaIcon];

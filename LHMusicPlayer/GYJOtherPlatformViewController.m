@@ -1,6 +1,6 @@
 //
-//  LHOtherPlatformViewController.m
-//  LHMusicPlayer
+//  GYJOtherPlatformViewController.m
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-5-1.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
@@ -8,13 +8,13 @@
 
 #import "GYJOtherPlatformViewController.h"
 #import "GYJShareIcon.h"
-#import "NTESNBShareNewMicroBlogViewController.h"
-#import "NTESMTencentWeiboViewController.h"
-#import "NTESIMRenrenManager.h"
-#import "NTESIMRenrenAuthorViewController.h"
+#import "GYJShareNewMicroBlogViewController.h"
+#import "GYJTencentWeiboViewController.h"
+#import "GYJRenrenManager.h"
+#import "GYJRenrenAuthorViewController.h"
 @interface GYJOtherPlatformViewController ()
 
-@property (nonatomic, strong) NTESNBShareNewMicroBlogViewController *sinaVC;
+@property (nonatomic, strong) GYJShareNewMicroBlogViewController *sinaVC;
 @property (nonatomic, strong) GYJShareIcon *sinaWeiboView;
 @property (nonatomic, strong) GYJShareIcon *tencentWeiboView;
 @property (nonatomic, strong) GYJShareIcon *renrenView;
@@ -105,7 +105,7 @@
         case GYJShareIconTypeSina:
         {
             if (!_sinaVC) {
-                self.sinaVC = [[NTESNBShareNewMicroBlogViewController alloc] init];
+                self.sinaVC = [[GYJShareNewMicroBlogViewController alloc] init];
                 [_sinaVC view];
             }
             if ([self isSinaBinded]) {
@@ -126,7 +126,7 @@
             break;
         case GYJShareIconTypeTencentWeibo:
         {
-            NTESMTencentWeiboViewController *vc = [[NTESMTencentWeiboViewController alloc] init];
+            GYJTencentWeiboViewController *vc = [[GYJTencentWeiboViewController alloc] init];
             if ([self isTencenWeiboBinded]){
                 GYJAlert *sinaAlert = [[GYJAlert alloc] initAlertWithTitle:@"取消腾讯微博绑定吗？" message:nil cancelTitle:@"取消" completeBlock:^(GYJAlert *alert, NSInteger buttonIndex) {
                     __strong typeof(weakSelf)strongSelf = weakSelf;
@@ -137,7 +137,7 @@
                 } otherTitle:@"确定", nil];
                 [sinaAlert show];
             }else{
-                NTESTCOAuthLoginController *loginVC = (NTESTCOAuthLoginController *)[vc newLoginController];
+                GYJTCOAuthLoginController *loginVC = (GYJTCOAuthLoginController *)[vc newLoginController];
                 [self presentViewController:loginVC animated:YES completion:nil];
             }
             
@@ -145,13 +145,13 @@
             break;
         case GYJShareIconTypeRenRen:
         {
-            BOOL isLogin = [[NTESIMRenrenManager shareInstance] isSessionValid];
+            BOOL isLogin = [[GYJRenrenManager shareInstance] isSessionValid];
             if (isLogin)
             {
                 GYJAlert *sinaAlert = [[GYJAlert alloc] initAlertWithTitle:@"取消人人网绑定吗？" message:nil cancelTitle:@"取消" completeBlock:^(GYJAlert *alert, NSInteger buttonIndex) {
                     __strong typeof(weakSelf)strongSelf = weakSelf;
                     if (buttonIndex) {
-                        [[NTESIMRenrenManager shareInstance] delUserSessionInfo];
+                        [[GYJRenrenManager shareInstance] delUserSessionInfo];
                         strongSelf.renrenView.binded = NO;
                     }
                 } otherTitle:@"确定", nil];
@@ -160,7 +160,7 @@
             else
             {
                 //推出登录界面
-                UIViewController *viewController = [[NTESIMRenrenAuthorViewController alloc] init];
+                UIViewController *viewController = [[GYJRenrenAuthorViewController alloc] init];
                 [self presentViewController:viewController animated:YES completion:nil];
             }
         }
@@ -190,7 +190,7 @@
 
 - (BOOL)isSinaBinded
 {
-    return [NTESNBShareNewMicroBlogViewController isSinaWeiboBinded];
+    return [GYJShareNewMicroBlogViewController isSinaWeiboBinded];
 }
 
 - (BOOL)isTencenWeiboBinded
@@ -198,7 +198,7 @@
     NSString *username = [US objectForKey:LOGIN_USERNAME_TENCENT_KEY];
     NSString *userData = [US objectForKey:LOGIN_DATA_TENCENT_KEY];
     
-    BOOL isBind = [[NTESMTencentManager shareInstance] authorize];
+    BOOL isBind = [[GYJTencentManager shareInstance] authorize];
     if (isBind && userData && username)
     {
         return YES;
@@ -211,7 +211,7 @@
 
 - (BOOL)isRenRenBinded
 {
-    return [[NTESIMRenrenManager shareInstance] isSessionValid];
+    return [[GYJRenrenManager shareInstance] isSessionValid];
 }
 
 

@@ -1,6 +1,6 @@
 //
-//  LHMainBaseViewController.m
-//  LHAD
+//  GYJMainBaseViewController.m
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-4-29.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
@@ -49,7 +49,7 @@
         self.customNaviBar.userInteractionEnabled = YES;
         self.customNaviBar.image = nil;
         [self.view addSubview:self.customNaviBar];
-        self.customNaviBar.backgroundColor = IM_NAVI_BLUE;
+        self.customNaviBar.backgroundColor = IM_NAVI_PINK;
         
         
         // title label
@@ -120,7 +120,7 @@
     self.customNaviBar.userInteractionEnabled = YES;
     self.customNaviBar.image = nil;
     [self.view addSubview:self.customNaviBar];
-    self.customNaviBar.backgroundColor = IM_NAVI_BLUE;
+    self.customNaviBar.backgroundColor = IM_NAVI_PINK;
     
     
     // title label

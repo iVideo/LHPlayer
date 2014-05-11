@@ -1,22 +1,22 @@
 //
-//  LHUserManager.m
-//  LHMusicPlayer
+//  GYJUserManager.m
+//  GYJMusicPlayer
 //
 //  Created by 郭亚娟 on 14-5-1.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
 //
 
 #import "GYJUserManager.h"
-#import "LHUserOperation.h"
-#import "LHHTTPClient.h"
+#import "GYJUserOperation.h"
+#import "GYJHTTPClient.h"
 #import "GYJJSON.h"
 #import "GYJMusicPlayerController.h"
 
 static GYJUserManager *sharedManager = nil;
 
 @interface GYJUserManager ()
-@property (nonatomic, strong) LHUser *loginUser;
-@property (nonatomic, strong) LHUser *localUser;
+@property (nonatomic, strong) GYJUser *loginUser;
+@property (nonatomic, strong) GYJUser *localUser;
 @property (nonatomic, strong) NSString *passpord;
 @property (nonatomic, strong) NSString *password;
 @end
@@ -25,7 +25,7 @@ static GYJUserManager *sharedManager = nil;
     AFHTTPRequestOperation *loginRequestOperation;
     AFHTTPRequestOperation *updateRequestOperation;
     AFHTTPRequestOperation *nickOperation;
-    LHHTTPClient *httpClient;
+    GYJHTTPClient *httpClient;
     
     NSString *tmpNickname;
 }
@@ -44,14 +44,14 @@ static GYJUserManager *sharedManager = nil;
 - (id)init{
     self = [super init];
     if (self) {
-        httpClient = [LHHTTPClient sharedClient];
+        httpClient = [GYJHTTPClient sharedClient];
         
-        LHUser *localUser = [[LHUser alloc] initLocalUser];
+        GYJUser *localUser = [[GYJUser alloc] initLocalUser];
         self.localUser = localUser;
         
         NSString *userName = [[NSUserDefaults standardUserDefaults] objectForKey:LOGIN_USERNAME_KEY];
         if (userName) {
-            LHUser *loginUser = [[LHUser alloc] initLoginUserWith:userName];
+            GYJUser *loginUser = [[GYJUser alloc] initLoginUserWith:userName];
             self.loginUser = loginUser;
         }
         
@@ -61,9 +61,9 @@ static GYJUserManager *sharedManager = nil;
     return self;
 }
 
-- (LHHTTPClient *)client{
+- (GYJHTTPClient *)client{
     if (!httpClient) {
-        httpClient = [LHHTTPClient sharedClient];
+        httpClient = [GYJHTTPClient sharedClient];
     }
     
     return httpClient;
@@ -149,7 +149,7 @@ static GYJUserManager *sharedManager = nil;
             [[NSUserDefaults standardUserDefaults] removeObjectForKey:REGISTER_USERNAME_KEY];
             
             //登录成功后需要更新app当前用户
-            LHUser *loginUser = [[LHUser alloc] initLoginUserWith:userAccount];
+            GYJUser *loginUser = [[GYJUser alloc] initLoginUserWith:userAccount];
             self.currentUser = self.loginUser = loginUser;
             
             [self updateUserDataForKey:API_163_USER_INFO];
@@ -184,9 +184,9 @@ static GYJUserManager *sharedManager = nil;
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     NSString *deviceId = [NSString stringWithFormat:@"iOS v%@",appVersion];
     NSDictionary *pra = @{@"deviceId":deviceId};
-    [self updateUserDataForKey:API_USER_LOGIN_NOTI parameters:pra success:^(LHUserOperation *operation) {
+    [self updateUserDataForKey:API_USER_LOGIN_NOTI parameters:pra success:^(GYJUserOperation *operation) {
         
-    } failed:^(LHUserOperation *operation) {
+    } failed:^(GYJUserOperation *operation) {
         
     }];
 }
@@ -209,7 +209,7 @@ static GYJUserManager *sharedManager = nil;
                   parameters:(NSDictionary *)parameters
                      success:(UserManagerOperationSuccessBlock)success
                       failed:(UserManagerOperationFailedBlock)failed{
-    LHUserOperation *operation = [[LHUserOperation alloc] init];
+    GYJUserOperation *operation = [[GYJUserOperation alloc] init];
     operation.key = key;
     operation.user = _currentUser;
     operation.parameters = parameters;
@@ -218,7 +218,7 @@ static GYJUserManager *sharedManager = nil;
     [self pushOperationToQueue:operation];
 }
 
-- (void)pushOperationToQueue:(LHUserOperation *)operation{
+- (void)pushOperationToQueue:(GYJUserOperation *)operation{
     if (![[self client] networkAvailable]) {
         NSError *error = nil;
         operation.error = error;
@@ -231,7 +231,7 @@ static GYJUserManager *sharedManager = nil;
 
 #pragma mark -
 #pragma mark - NTESIMUserOperationDelegate
-- (void)userOperationCompleted:(LHUserOperation *)operation{
+- (void)userOperationCompleted:(GYJUserOperation *)operation{
     
     NSDictionary *dic = [operation.responseData objectFromJSONData];
     if ([operation.key isEqualToString:API_163_USER_INFO]) {
@@ -266,7 +266,7 @@ static GYJUserManager *sharedManager = nil;
         }
     }
 }
-- (void)userOperationFailed:(LHUserOperation *)operation{
+- (void)userOperationFailed:(GYJUserOperation *)operation{
     
     if ([operation.key isEqualToString:API_163_USER_INFO]) {
         if ([_delegate respondsToSelector:@selector(userloginFailedWithErrorType:)]) {
@@ -304,7 +304,7 @@ static GYJUserManager *sharedManager = nil;
     [userDefault removeObjectForKey:LOGIN_COOKIE_KEY];
     [userDefault synchronize];
     [self clearCookie];
-    self.currentUser = [[LHUser alloc] initLocalUser];
+    self.currentUser = [[GYJUser alloc] initLocalUser];
     //..........
     [[NSNotificationCenter defaultCenter] postNotificationName:NTESIMUserLogoutNotification object:nil];
     

@@ -1,6 +1,6 @@
 //
-//  LHMusicPlayerTests.m
-//  LHMusicPlayerTests
+//  GYJMusicPlayerTests.m
+//  GYJMusicPlayerTests
 //
 //  Created by 郭亚娟 on 14-5-1.
 //  Copyright (c) 2014年 郭亚娟. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface LHMusicPlayerTests : XCTestCase
+@interface GYJMusicPlayerTests : XCTestCase
 
 @end
 
-@implementation LHMusicPlayerTests
+@implementation GYJMusicPlayerTests
 
 - (void)setUp
 {

@@ -107,6 +107,7 @@ static NSString *musicDownloadPath = @"downloadMusic/";
     return YES;
 }
 
+#pragma mark - 获取歌曲详细信息
 - (void)searchMusicDetailWithSongID:(NSString *)songID success:(GYJMusicDetailObjectBlock)songDetail failure:(APIFailureBlock)failure{
     if (!verifiedString(songID)) {
         songID = @"";
@@ -129,6 +130,8 @@ static NSString *musicDownloadPath = @"downloadMusic/";
     operation.responseSerializer = [AFHTTPResponseSerializer serializer];
     [self addOperation:operation forKey:keyMusicDetail];
 }
+
+#pragma mark - 按艺人，歌曲名称，专辑搜索
 - (void)searchWithKeyword:(NSString *)keyword success:(GYJMusicSearchResaults)musicSearchObjects failure:(APIFailureBlock)failedBlock{
     if (!verifiedString(keyword)) {
         keyword = @"";
@@ -152,6 +155,26 @@ static NSString *musicDownloadPath = @"downloadMusic/";
     [self addOperation:operation forKey:keyMusicSearching];
 }
 
+#pragma mark - 搜索歌曲歌词
+- (void)searchMusicLyricWithURL:(NSURL *)urlString success:(void(^)(id lyric))successBlock failure:(APIFailureBlock)failure{
+    NSURLRequest *lyricRequest = [[NSURLRequest alloc] initWithURL:urlString];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:lyricRequest];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure) {
+            failure(error);
+        }
+    }];
+    
+    operation.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [self addOperation:operation forKey:keyMusicLyric];
+}
+
+#pragma mark - 解析歌曲信息
 - (void)parserSongDetail:(id)songDetail withBlock:(GYJMusicDetailObjectBlock)songDetailBlock{
     if (![songDetail isKindOfClass:[NSDictionary class]]) {
         if (songDetailBlock) {
@@ -219,6 +242,7 @@ static NSString *musicDownloadPath = @"downloadMusic/";
     }
 }
 
+#pragma mark - 下载歌曲文件到指定目录
 - (void)downloadFileWithPath:(NSString *)path fileURL:(NSURL *)url downProgress:(void (^)(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead))block{
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     AFDownloadRequestOperation *downloadOperation = [[AFDownloadRequestOperation alloc] initWithRequest:request targetPath:path shouldResume:YES];
@@ -228,21 +252,4 @@ static NSString *musicDownloadPath = @"downloadMusic/";
     [self addOperation:downloadOperation forKey:keyMusicDownload];
 }
 
-- (void)searchMusicLyricWithURL:(NSURL *)urlString success:(void(^)(id lyric))successBlock failure:(APIFailureBlock)failure{
-    NSURLRequest *lyricRequest = [[NSURLRequest alloc] initWithURL:urlString];
-    
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:lyricRequest];
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        if (successBlock) {
-            successBlock(responseObject);
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
-    
-    operation.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [self addOperation:operation forKey:keyMusicLyric];
-}
 @end

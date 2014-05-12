@@ -30,32 +30,6 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    BOOL handled = NO;
-    //处理易信
-    handled = [YXApi handleOpenURL:url delegate:nil];
-    if (handled) {
-        return YES;
-    }
-    
-    //处理微信
-    handled = [WXApi handleOpenURL:url delegate:self];
-    if (handled) {
-        return YES;
-    }
-    
-    return NO;
-}
-
-- (void)onReceiveRequest: (YXBaseReq *)req {
-    
-}
-
-- (void)onReceiveResponse: (YXBaseResp *)resp {
-    
-}
-
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

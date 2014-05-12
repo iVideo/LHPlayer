@@ -7,8 +7,8 @@
 //
 
 #import "GYJShareViewController.h"
-#import "GYJShareWeixinManager.h"
-#import "GYJShareYixinManager.h"
+//#import "GYJShareWeixinManager.h"
+//#import "GYJShareYixinManager.h"
 #import "GYJShareMailManager.h"
 #import "GYJShareNewMicroBlogViewController.h"
 #import "GYJTencentWeiboViewController.h"
@@ -69,17 +69,6 @@ enum
         self.shareContent = shareContent;
         self.shareImage = shareImage;
         _sharePlateformArray = [[NSMutableArray alloc] init];
-        if (0/*[YXApi isYXAppInstalled]*/)
-        {
-            [_sharePlateformArray addObject:[NSArray arrayWithObjects:@"share_platform_yixin.png",@"易信好友",[NSNumber numberWithInt:kShareMagzineToYXFriend], nil]];
-            [_sharePlateformArray addObject:[NSArray arrayWithObjects:@"share_platform_yixintimeline.png",@"易信朋友圈",[NSNumber numberWithInt:kShareMagzineToYXTimeline], nil]];
-        }
-        if (0/*[WXApi isWXAppInstalled]*/)
-        {
-            [_sharePlateformArray addObject:[NSArray arrayWithObjects:@"share_platform_wechat.png",@"微信好友",[NSNumber numberWithInt:kShareMagzineToWXFriend], nil]];
-            [_sharePlateformArray addObject:[NSArray arrayWithObjects:@"share_platform_wechattimeline.png",@"微信朋友圈",[NSNumber numberWithInt:kShareMagzineToWXTimeline], nil]];
-        }
-        
         [_sharePlateformArray addObject:[NSArray arrayWithObjects:@"share_platform_sina.png",@"新浪微博",[NSNumber numberWithInt:kShareMagzineToSinaWeibo], nil]];
         [_sharePlateformArray addObject:[NSArray arrayWithObjects:@"share_platform_tencent.png",@"腾讯微博",[NSNumber numberWithInt:kShareMagzineToTCWeibo], nil]];
         [_sharePlateformArray addObject:[NSArray arrayWithObjects:@"share_platform_renren.png",@"人人网",[NSNumber numberWithInt:kShareMagezineToRenRen], nil]];
@@ -200,18 +189,6 @@ enum
 {
     switch (button.tag)
     {
-        case kShareMagzineToYXFriend:
-            [[GYJShareYixinManager sharedManager] sendYXImage:_shareImage];
-            break;
-        case kShareMagzineToYXTimeline:
-            [[GYJShareYixinManager sharedManager] sendYXImage:_shareImage withSence:kYXSceneTimeline];
-            break;
-        case kShareMagzineToWXFriend:
-            [[GYJShareWeixinManager sharedManager] sendWXImage:_shareImage];
-            break;
-        case kShareMagzineToWXTimeline:
-            [[GYJShareWeixinManager sharedManager] sendWXImage:_shareImage withSence:WXSceneTimeline];
-            break;
         case kShareMagzineToSinaWeibo:
             [self shareToSinaWeibo];
             break;

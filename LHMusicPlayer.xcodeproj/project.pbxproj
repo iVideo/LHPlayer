@@ -25,8 +25,6 @@
 		CA32A5A4191A7060005A9CAD /* WBEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A58F191A705F005A9CAD /* WBEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CA32A5A5191A7060005A9CAD /* WBRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A591191A7060005A9CAD /* WBRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CA32A5A6191A7060005A9CAD /* WBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A594191A7060005A9CAD /* WBUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		CA32A5A7191A7060005A9CAD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA32A596191A7060005A9CAD /* libWeChatSDK.a */; };
-		CA32A5A8191A7060005A9CAD /* libYixinSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA32A59A191A7060005A9CAD /* libYixinSDK.a */; };
 		CA32A5AF191A70A0005A9CAD /* GYJOAuthLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5AC191A70A0005A9CAD /* GYJOAuthLoginController.m */; };
 		CA32A5B0191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5AE191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m */; };
 		CA32A5C8191A7191005A9CAD /* GYJRenrenAuthorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA32A5B3191A7191005A9CAD /* GYJRenrenAuthorViewController.m */; };
@@ -119,7 +117,6 @@
 		CA65777F191E58A50075CE59 /* LHDownloadedMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA65777E191E58A50075CE59 /* LHDownloadedMusicViewController.m */; };
 		CA657783191E59C60075CE59 /* GYJOnlineMusicController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA657782191E59C60075CE59 /* GYJOnlineMusicController.m */; };
 		CA6EFE26191F5DE8003498AA /* GYJShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6EFE25191F5DE8003498AA /* GYJShareViewController.m */; };
-		CA6EFE29191F5EA0003498AA /* GYJShareWeixinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6EFE28191F5EA0003498AA /* GYJShareWeixinManager.m */; };
 		CA7DFD141914894A00B061AE /* cm_btn_listening_prs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7DFD121914894A00B061AE /* cm_btn_listening_prs@2x.png */; };
 		CA7DFD151914894A00B061AE /* cm_btn_listening@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA7DFD131914894A00B061AE /* cm_btn_listening@2x.png */; };
 		CA7DFD1E1914BFA500B061AE /* SCLTAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA7DFD181914BFA500B061AE /* SCLTAudioPlayer.m */; };
@@ -139,7 +136,6 @@
 		CADD48F1191A3BDC009034C1 /* GYJMusicCollectionDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD48F0191A3BDC009034C1 /* GYJMusicCollectionDataBase.m */; };
 		CADD48F5191A43AF009034C1 /* like_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADD48F3191A43AF009034C1 /* like_normal@2x.png */; };
 		CADD48F6191A43AF009034C1 /* like_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CADD48F4191A43AF009034C1 /* like_selected@2x.png */; };
-		CAE40516191F688200DB3F09 /* GYJShareYixinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE40515191F688200DB3F09 /* GYJShareYixinManager.m */; };
 		CAE4051A191F68DC00DB3F09 /* GYJShareMailManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE40519191F68DC00DB3F09 /* GYJShareMailManager.m */; };
 		CAE4051D191F693D00DB3F09 /* GYJMailComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE4051C191F693D00DB3F09 /* GYJMailComposeViewController.m */; };
 		CAE4051F191F73AF00DB3F09 /* button_share_send_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAE4051E191F73AF00DB3F09 /* button_share_send_normal@2x.png */; };
@@ -260,12 +256,6 @@
 		CA32A592191A7060005A9CAD /* WBSDKGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSDKGlobal.h; sourceTree = "<group>"; };
 		CA32A593191A7060005A9CAD /* WBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBUtil.h; sourceTree = "<group>"; };
 		CA32A594191A7060005A9CAD /* WBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBUtil.m; sourceTree = "<group>"; };
-		CA32A596191A7060005A9CAD /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
-		CA32A597191A7060005A9CAD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		CA32A598191A7060005A9CAD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		CA32A59A191A7060005A9CAD /* libYixinSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYixinSDK.a; sourceTree = "<group>"; };
-		CA32A59B191A7060005A9CAD /* YXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApi.h; sourceTree = "<group>"; };
-		CA32A59C191A7060005A9CAD /* YXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXApiObject.h; sourceTree = "<group>"; };
 		CA32A5AB191A70A0005A9CAD /* GYJOAuthLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJOAuthLoginController.h; sourceTree = "<group>"; };
 		CA32A5AC191A70A0005A9CAD /* GYJOAuthLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJOAuthLoginController.m; sourceTree = "<group>"; };
 		CA32A5AD191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareNewMicroBlogViewController.h; sourceTree = "<group>"; };
@@ -401,8 +391,6 @@
 		CA657782191E59C60075CE59 /* GYJOnlineMusicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJOnlineMusicController.m; sourceTree = "<group>"; };
 		CA6EFE24191F5DE8003498AA /* GYJShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareViewController.h; sourceTree = "<group>"; };
 		CA6EFE25191F5DE8003498AA /* GYJShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareViewController.m; sourceTree = "<group>"; };
-		CA6EFE27191F5EA0003498AA /* GYJShareWeixinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GYJShareWeixinManager.h; path = Tencent/GYJShareWeixinManager.h; sourceTree = "<group>"; };
-		CA6EFE28191F5EA0003498AA /* GYJShareWeixinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GYJShareWeixinManager.m; path = Tencent/GYJShareWeixinManager.m; sourceTree = "<group>"; };
 		CA7DFD121914894A00B061AE /* cm_btn_listening_prs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_btn_listening_prs@2x.png"; sourceTree = "<group>"; };
 		CA7DFD131914894A00B061AE /* cm_btn_listening@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cm_btn_listening@2x.png"; sourceTree = "<group>"; };
 		CA7DFD171914BFA500B061AE /* SCLTAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTAudioPlayer.h; sourceTree = "<group>"; };
@@ -434,8 +422,6 @@
 		CADD48F0191A3BDC009034C1 /* GYJMusicCollectionDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJMusicCollectionDataBase.m; sourceTree = "<group>"; };
 		CADD48F3191A43AF009034C1 /* like_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like_normal@2x.png"; sourceTree = "<group>"; };
 		CADD48F4191A43AF009034C1 /* like_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like_selected@2x.png"; sourceTree = "<group>"; };
-		CAE40514191F688200DB3F09 /* GYJShareYixinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareYixinManager.h; sourceTree = "<group>"; };
-		CAE40515191F688200DB3F09 /* GYJShareYixinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareYixinManager.m; sourceTree = "<group>"; };
 		CAE40518191F68DC00DB3F09 /* GYJShareMailManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJShareMailManager.h; sourceTree = "<group>"; };
 		CAE40519191F68DC00DB3F09 /* GYJShareMailManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYJShareMailManager.m; sourceTree = "<group>"; };
 		CAE4051B191F693D00DB3F09 /* GYJMailComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYJMailComposeViewController.h; sourceTree = "<group>"; };
@@ -559,10 +545,8 @@
 			files = (
 				CAFC68FD1913424C00645725 /* AVFoundation.framework in Frameworks */,
 				CAFC68FB1913423300645725 /* MediaPlayer.framework in Frameworks */,
-				CA32A5A7191A7060005A9CAD /* libWeChatSDK.a in Frameworks */,
 				CAFC68F91913422A00645725 /* AudioToolbox.framework in Frameworks */,
 				CAEE4E5C19121D5F00CCE46A /* CoreGraphics.framework in Frameworks */,
-				CA32A5A8191A7060005A9CAD /* libYixinSDK.a in Frameworks */,
 				CAEE4E5E19121D5F00CCE46A /* UIKit.framework in Frameworks */,
 				CAEE4E5A19121D5F00CCE46A /* Foundation.framework in Frameworks */,
 				7BBB557162C7477A800C5DD6 /* libPods.a in Frameworks */,
@@ -628,8 +612,6 @@
 			children = (
 				CA32A57C191A705F005A9CAD /* json */,
 				CA32A588191A705F005A9CAD /* Sina_Oauth2.0 */,
-				CA32A595191A7060005A9CAD /* WeChatSDK_1.4.2-2.1 */,
-				CA32A599191A7060005A9CAD /* YiXinSDKExport */,
 			);
 			path = ShareSDK;
 			sourceTree = "<group>";
@@ -678,32 +660,10 @@
 			path = SFHFKeychainUtils;
 			sourceTree = "<group>";
 		};
-		CA32A595191A7060005A9CAD /* WeChatSDK_1.4.2-2.1 */ = {
-			isa = PBXGroup;
-			children = (
-				CA32A596191A7060005A9CAD /* libWeChatSDK.a */,
-				CA32A597191A7060005A9CAD /* WXApi.h */,
-				CA32A598191A7060005A9CAD /* WXApiObject.h */,
-			);
-			path = "WeChatSDK_1.4.2-2.1";
-			sourceTree = "<group>";
-		};
-		CA32A599191A7060005A9CAD /* YiXinSDKExport */ = {
-			isa = PBXGroup;
-			children = (
-				CA32A59A191A7060005A9CAD /* libYixinSDK.a */,
-				CA32A59B191A7060005A9CAD /* YXApi.h */,
-				CA32A59C191A7060005A9CAD /* YXApiObject.h */,
-			);
-			path = YiXinSDKExport;
-			sourceTree = "<group>";
-		};
 		CA32A5A9191A7095005A9CAD /* 分享 */ = {
 			isa = PBXGroup;
 			children = (
 				CAE40517191F68CE00DB3F09 /* Mail */,
-				CAE40513191F686300DB3F09 /* 易信 */,
-				CAE40512191F685C00DB3F09 /* 微信 */,
 				CA32A5D2191A71DB005A9CAD /* Tencent */,
 				CA32A5B1191A7191005A9CAD /* Renren */,
 				CA32A5AA191A70A0005A9CAD /* Sina */,
@@ -1053,24 +1013,6 @@
 				CADD48F4191A43AF009034C1 /* like_selected@2x.png */,
 			);
 			name = like;
-			sourceTree = "<group>";
-		};
-		CAE40512191F685C00DB3F09 /* 微信 */ = {
-			isa = PBXGroup;
-			children = (
-				CA6EFE27191F5EA0003498AA /* GYJShareWeixinManager.h */,
-				CA6EFE28191F5EA0003498AA /* GYJShareWeixinManager.m */,
-			);
-			name = "微信";
-			sourceTree = "<group>";
-		};
-		CAE40513191F686300DB3F09 /* 易信 */ = {
-			isa = PBXGroup;
-			children = (
-				CAE40514191F688200DB3F09 /* GYJShareYixinManager.h */,
-				CAE40515191F688200DB3F09 /* GYJShareYixinManager.m */,
-			);
-			name = "易信";
 			sourceTree = "<group>";
 		};
 		CAE40517191F68CE00DB3F09 /* Mail */ = {
@@ -1647,7 +1589,6 @@
 				CA32A5A3191A7060005A9CAD /* WBAuthorize.m in Sources */,
 				CA657758191E0DB70075CE59 /* GYJMusicSearchCell.m in Sources */,
 				CA32A5CB191A7191005A9CAD /* ROError.m in Sources */,
-				CA6EFE29191F5EA0003498AA /* GYJShareWeixinManager.m in Sources */,
 				CAFC691B1913946D00645725 /* GYJRoundView.m in Sources */,
 				CA537C5319123CF800663F67 /* SevenSwitch.m in Sources */,
 				CA65777B191E4D080075CE59 /* LDProgressView.m in Sources */,
@@ -1705,7 +1646,6 @@
 				CA32A5B0191A70A0005A9CAD /* GYJShareNewMicroBlogViewController.m in Sources */,
 				CAEE4EBC19121EAD00CCE46A /* UILabel+Custom.m in Sources */,
 				CA32A5D9191A71DB005A9CAD /* GYJTencentManager.m in Sources */,
-				CAE40516191F688200DB3F09 /* GYJShareYixinManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

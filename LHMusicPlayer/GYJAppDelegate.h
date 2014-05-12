@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "YXApi.h"
-#import "WXApi.h"
-@interface GYJAppDelegate : UIResponder <UIApplicationDelegate,WXApiDelegate,YXApiDelegate>
+@interface GYJAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @end
